@@ -137,6 +137,7 @@ if [[ ! -e /lib/modules/.installed ]]; then
   exit 0
 else
   echo "Headers already installed"
+  apt-get install -y bpfcc-tools python-bpfcc libbpfcc libbpfcc-dev
   exit 0
 fi
 
