@@ -3,7 +3,7 @@
 set -ex
 
 LSB_FILE="/etc/lsb-release.host"
-OS_RELEASE_FILE="/etc/os-release.host"
+OS_RELEASE_FILE="/etc/os-release"
 TARGET_DIR="/usr/src"
 HOST_MODULES_DIR="/lib/modules.host"
 
@@ -139,3 +139,5 @@ else
   echo "Headers already installed"
   exit 0
 fi
+
+apt-get install -y bpfcc-tools python-bpfcc libbpfcc libbpfcc-dev
